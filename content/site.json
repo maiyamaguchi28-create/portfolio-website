@@ -1,0 +1,61 @@
+{
+  "name": "Mai Yamaguchi",
+  "tagline": "Strategy Consultant & Product Manager",
+  "about": {
+    "greeting": "👋 Hello, I'm",
+    "photo": "/images/profile.png",
+    "bio": [
+      "I'm a strategy consultant and product manager, with a passion for building customised productivity apps.",
+      "I focus on practical tools that fit how people actually work — simple to use, thoughtfully designed, and built to solve real problems."
+    ]
+  },
+  "projectsSection": {
+    "label": "What I've built",
+    "title": "Projects",
+    "subtitle": "Custom productivity apps I've designed and shipped."
+  },
+  "projects": [
+    {
+      "id": "habit-streaker",
+      "title": "Habit Streaker",
+      "tag": "Productivity",
+      "summary": "A simple habit tracker tailored to my needs — digitising a notebook tracker without the complexity of existing apps.",
+      "image": "/images/projects/habit-streaker.svg",
+      "details": [
+        {
+          "heading": "What I built",
+          "text": "I wanted to digitise my habit tracker from a notebook to develop new healthy habits, but found existing solutions too complex and cumbersome. So I built one tailored to my needs that was simple and easy to use."
+        },
+        {
+          "heading": "What I learned",
+          "text": "I was originally using Blink to build the app, but realised that Banani + Figma gives me more control over the designs to make finer attunements."
+        },
+        {
+          "heading": "What to improve next time",
+          "text": "Because I deliberately kept this simple as a starter project, and the data is stored on the local device, changing my phone meant losing access to the original data and images stopped saving correctly. For later projects, I used Supabase integration to prevent such issues."
+        }
+      ],
+      "links": {
+        "live": "",
+        "github": ""
+      }
+    }
+  ],
+  "contactSection": {
+    "label": "Let's connect",
+    "title": "Contact",
+    "subtitle": "I'm always open to interesting projects and conversations."
+  },
+  "contact": {
+    "phone": "+44 7542 188 436",
+    "email": "mai.yamaguchi28@gmail.com",
+    "linkedin": {
+      "label": "linkedin.com/in/mai-yamaguchi",
+      "url": "https://www.linkedin.com/in/mai-yamaguchi/"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Mai Yamaguchi. All rights reserved.",
+    "tagline": "Built with care."
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of AI applications" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <nav class="nav" aria-label="Main navigation">
+      <span class="nav__brand" id="nav-brand"></span>
+      <div class="nav__links">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <section id="about" class="section section--about">
+        <img
+          id="about-photo"
+          class="about__photo"
+          src=""
+          alt=""
+          width="208"
+          height="208"
+        />
+        <div class="about__content">
+          <p class="section-label" id="about-greeting"></p>
+          <h1 class="about__name" id="about-name"></h1>
+          <p class="about__tagline" id="about-tagline"></p>
+          <div id="about-bio"></div>
+          <div class="about__actions">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--secondary">Get in Touch</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section--projects">
+        <div class="section-header">
+          <p class="section-label" id="projects-label"></p>
+          <h2 class="section-title" id="projects-title"></h2>
+          <p class="section-subtitle" id="projects-subtitle"></p>
+        </div>
+        <div class="projects-grid" id="projects-grid"></div>
+      </section>
+
+      <section id="contact" class="section section--contact">
+        <div class="section-header">
+          <p class="section-label" id="contact-label"></p>
+          <h2 class="section-title" id="contact-title"></h2>
+          <p class="section-subtitle" id="contact-subtitle"></p>
+        </div>
+        <div class="contact-cards" id="contact-cards"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="footer-copyright"></p>
+      <p id="footer-tagline"></p>
+    </footer>
+
+    <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+      <div class="modal__inner">
+        <button class="modal__close" id="modal-close" aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" />
+          </svg>
+        </button>
+        <img class="modal__image" id="modal-image" src="" alt="" />
+        <div class="modal__body">
+          <span class="tag" id="modal-tag"></span>
+          <h2 class="modal__title" id="modal-title"></h2>
+          <p class="modal__details" id="modal-details"></p>
+          <div class="modal__links" id="modal-links"></div>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="/js/main.js" type="module"></script>
+  </body>
+</html>
