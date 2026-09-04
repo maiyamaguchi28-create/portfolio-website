@@ -39,6 +39,56 @@
         "live": "",
         "github": ""
       }
+    },
+    {
+      "id": "eisenhower-todo",
+      "title": "Eisenhower To-Do",
+      "tag": "Productivity",
+      "summary": "A custom to-do list laid out as an Eisenhower matrix — urgent vs not urgent, important vs not important.",
+      "image": "/images/projects/eisenhower.jpg",
+      "details": [
+        {
+          "heading": "What I built",
+          "text": "I wanted to customise my to-do list so that it was in a matrix resembling an Eisenhower matrix — showing urgent/non-urgent tasks, and important/non-important tasks."
+        },
+        {
+          "heading": "What I learned",
+          "text": "Getting design proportions right was surprisingly difficult, and I ended up customising the pixels in Figma and importing it to Cursor from there."
+        },
+        {
+          "heading": "What to improve next time",
+          "text": "There are still some UX improvements that can be made to make this more usable; this will require a longer trial period to understand key friction points to optimise workflow."
+        }
+      ],
+      "links": {
+        "live": "",
+        "github": ""
+      }
+    },
+    {
+      "id": "rock-pebble-sand-trello",
+      "title": "RockPebbleSandTrello",
+      "tag": "Productivity",
+      "summary": "A Trello-style life board that visually differentiates big projects from smaller tasks by size and importance.",
+      "image": "/images/projects/rock-pebble-sand.jpg",
+      "details": [
+        {
+          "heading": "What I built",
+          "text": "I've kept high-level life projects on Trello, but found it cumbersome because it doesn't differentiate between big projects and smaller tasks. To solve this, I've made a Trello board that visually differentiates between projects based on size / importance."
+        },
+        {
+          "heading": "What I learned",
+          "text": "I used Supabase to make this multi-device compatible and so the data can persist; though ensuring smooth integration (and ensuring the right interactions in drag & drop action) was surprisingly time-consuming."
+        },
+        {
+          "heading": "What to improve next time",
+          "text": "Whilst the board is optimised for web-interface on laptop, the UX is not ideal on mobile devices. Further research on mobile interactions could improve this, but has been deprioritised as it is only used infrequently on mobile devices."
+        }
+      ],
+      "links": {
+        "live": "https://lifeboard-sage.vercel.app",
+        "github": ""
+      }
     }
   ],
   "contactSection": {
