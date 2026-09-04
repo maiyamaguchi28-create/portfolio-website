@@ -231,14 +231,19 @@ a {
 }
 
 .project-card__image-wrap {
-  height: 11rem;
+  height: 14rem;
   overflow: hidden;
+  background: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-card__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center top;
 }
 
 .project-card__body {
@@ -384,8 +389,10 @@ a {
 
 .modal__image {
   width: 100%;
-  height: 16rem;
-  object-fit: cover;
+  max-height: 28rem;
+  height: auto;
+  object-fit: contain;
+  background: var(--muted);
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;
 }
 
