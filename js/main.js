@@ -97,6 +97,58 @@ function renderFooter(data) {
 }
 
 const modal = document.getElementById("project-modal");
+const carouselEl = document.getElementById("modal-carousel");
+const carouselImage = document.getElementById("modal-image");
+const carouselDots = document.getElementById("carousel-dots");
+const carouselPrev = document.getElementById("carousel-prev");
+const carouselNext = document.getElementById("carousel-next");
+
+let carouselImages = [];
+let carouselIndex = 0;
+let carouselTitle = "";
+
+function projectImages(project) {
+  if (Array.isArray(project.images) && project.images.length) return project.images;
+  return project.image ? [project.image] : [];
+}
+
+function renderCarousel() {
+  const multi = carouselImages.length > 1;
+  carouselEl.classList.toggle("carousel--multi", multi);
+  carouselImage.src = carouselImages[carouselIndex] || "";
+  carouselImage.alt = `${carouselTitle} — image ${carouselIndex + 1}`;
+
+  carouselDots.innerHTML = "";
+  if (!multi) return;
+
+  carouselImages.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "carousel__dot" + (i === carouselIndex ? " is-active" : "");
+    dot.setAttribute("aria-label", `Show image ${i + 1}`);
+    dot.addEventListener("click", (e) => {
+      e.stopPropagation();
+      carouselIndex = i;
+      renderCarousel();
+    });
+    carouselDots.appendChild(dot);
+  });
+}
+
+function stepCarousel(delta) {
+  if (carouselImages.length < 2) return;
+  carouselIndex = (carouselIndex + delta + carouselImages.length) % carouselImages.length;
+  renderCarousel();
+}
+
+carouselPrev.addEventListener("click", (e) => {
+  e.stopPropagation();
+  stepCarousel(-1);
+});
+carouselNext.addEventListener("click", (e) => {
+  e.stopPropagation();
+  stepCarousel(1);
+});
 
 function renderDetails(project) {
   const el = document.getElementById("modal-details");
@@ -113,8 +165,11 @@ function renderDetails(project) {
 }
 
 function openModal(project) {
-  document.getElementById("modal-image").src = project.image;
-  document.getElementById("modal-image").alt = project.title;
+  carouselImages = projectImages(project);
+  carouselIndex = 0;
+  carouselTitle = project.title;
+  renderCarousel();
+
   document.getElementById("modal-tag").textContent = project.tag;
   document.getElementById("modal-title").textContent = project.title;
   renderDetails(project);
@@ -144,6 +199,11 @@ function openModal(project) {
 document.getElementById("modal-close").addEventListener("click", () => modal.close());
 modal.addEventListener("click", (e) => {
   if (e.target === modal) modal.close();
+});
+document.addEventListener("keydown", (e) => {
+  if (!modal.open) return;
+  if (e.key === "ArrowLeft") stepCarousel(-1);
+  if (e.key === "ArrowRight") stepCarousel(1);
 });
 
 async function init() {

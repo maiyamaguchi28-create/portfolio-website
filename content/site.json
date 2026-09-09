@@ -21,6 +21,10 @@
       "tag": "Productivity",
       "summary": "A simple habit tracker tailored to my needs — digitising a notebook tracker without the complexity of existing apps.",
       "image": "/images/projects/habit-streaker.jpg",
+      "images": [
+        "/images/projects/habit-streaker.jpg",
+        "/images/projects/habit-streaker-2.jpg"
+      ],
       "details": [
         {
           "heading": "What I built",
@@ -46,6 +50,10 @@
       "tag": "Productivity",
       "summary": "A custom to-do list laid out as an Eisenhower matrix — urgent vs not urgent, important vs not important.",
       "image": "/images/projects/eisenhower.jpg",
+      "images": [
+        "/images/projects/eisenhower.jpg",
+        "/images/projects/eisenhower-2.jpg"
+      ],
       "details": [
         {
           "heading": "What I built",
@@ -71,6 +79,10 @@
       "tag": "Productivity",
       "summary": "A Trello-style life board that visually differentiates big projects from smaller tasks by size and importance.",
       "image": "/images/projects/rock-pebble-sand.jpg",
+      "images": [
+        "/images/projects/rock-pebble-sand.jpg",
+        "/images/projects/rock-pebble-sand-2.jpg"
+      ],
       "details": [
         {
           "heading": "What I built",
